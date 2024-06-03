@@ -1237,19 +1237,18 @@ export default function Home({ sendDataToParent }) {
                   </div>
                 </div>
                 <input
-   //              type="text"
+   
    type="number"
-  //step="any
+
                   placeholder="0.00000"
                   className="bg-transparent flex-1 outline-none border-none text-base text-[#ebefe9]"
                   value={value}
-                 // onChange={(e) => setValue(e.target.value)}
-                      onChange={(e) => {
+                 onChange={(e) => {
     const inputValue = e.target.value;
-    if (!isNaN(inputValue) && parseFloat(inputValue) >= 1) {
-      setValue(inputValue);
+    if (!isNaN(inputValue) && inputValue.indexOf('.') === -1 && parseInt(inputValue) >= 1) {
+        setValue(inputValue);
     }
-  }}
+}}
                 />
               </div>
             </div>
@@ -1296,19 +1295,18 @@ export default function Home({ sendDataToParent }) {
                   </div>
                 </div>
                 <input
-   //                type="text"
+
    type="number"
-  //step="any
+
                   placeholder="0.00000"
                   className="bg-transparent flex-1 outline-none border-none text-base text-[#ebefe9]"
                   value={value}
-                 // onChange={(e) => setValue(e.target.value)}
-                      onChange={(e) => {
+                 onChange={(e) => {
     const inputValue = e.target.value;
-    if (!isNaN(inputValue) && parseFloat(inputValue) >= 1) {
-      setValue(inputValue);
+    if (!isNaN(inputValue) && inputValue.indexOf('.') === -1 && parseInt(inputValue) >= 1) {
+        setValue(inputValue);
     }
-  }}
+}}
                 />
               </div>
             </div>
